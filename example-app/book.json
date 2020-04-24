@@ -1,0 +1,10 @@
+{
+  "root": "./content",
+  "title": "My Example Site",
+  "plugins": ["anchorjs"],
+  "pluginsConfig": {
+    "anchorjs": {
+      "placement": "left"
+    }
+  }
+}
