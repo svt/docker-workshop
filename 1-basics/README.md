@@ -14,10 +14,6 @@ In this chapter you will learn about container images and how to get them to run
 
 ---
 
-<img src="img/containers_vs_vms.jpeg" alt="Containers vs VMs - Part of a fanzine by Julia Evans" />
-
----
-
 ## 1.1. Docker images <a name="images"></a>
 
 Docker containers are created from *images*. An *image* is a bit like a template, from which a container can be instantiated and run. So, the very first thing you need in order to run any docker containers is the appropriate *image*.
@@ -142,10 +138,6 @@ Look at the output: Images have *IDs*, *names* and *tags* to help identify them.
 
 ---
 
-<img src="img/docker-container-cartoon.jpeg" alt="Container Registries! Part of a fanzine by Julia Evans" />
-
----
-
 ## 1.2 Running things in containers  <a name="commands"></a>
 
 OK, so there was some output from the last command, but nothing really *happened* in that container, right? The reason for this is simply that the Ubuntu image does not have instructions to actually do anything when it is run - it only provides a simulated Ubuntu environment for *you* to run commands in. If we want to make the container actually do something, we have to provide it with some more instructions.
@@ -245,6 +237,8 @@ docker ps -a # The switch "-a" tells the docker service to show us *all* contain
 
 Wow, look at all those stopped containers!
 
+---
+
 ## 1.4. Interacting with containers <a name="interacting"></a>
 
 Remember how we can run any command we want in a container? We can even run a shell! (If the image has one installed, that is. More on available commands later.)
@@ -283,12 +277,6 @@ The shell was the only process running in the container, so when the shell exits
 
 </details>
 
----
-
-<img src="img/container_are_processes.jpeg" alt="Containers are just processes - Part of a fanzine by Julia Evans" />
-
----
-
 ### Practice: Catching some logs
 
 The `docker log` command is very useful and will show logs from both running and stopped containers. The syntax is:
@@ -314,6 +302,8 @@ docker logs ea992f7195b7
 #### How you'll know it worked
 
 You should see all the commands you ran against the interactive shell and their output in the logs. The logs are a complete record of the interactive session!
+
+---
 
 ## 1.5. Basic networking <a name="networking"></a>
 
@@ -371,10 +361,6 @@ The output actually contains a whole section of networking information:
 And as we can see, the container has the IP address `172.17.0.2`. It is a private address on a /24 network that is managed by the docker daemon and only exists inside your computer. Every docker container you start gets assigned one automatically. Right now we aren't using it for anything, but it might come in useful later.
 
 (There is *a lot* more to docker networking, but this is basically the default behaviour and it is what will usually happen if you run docker with the default configuration. Most of us never need to dig deeper than this, fortunately, but you should know that this is one specific scenario only and many many more exist out there.)
-
----
-
-<img src="img/container_network.jpeg" alt="Container Networking - Part of a fanzine by Julia Evans" />
 
 ---
 

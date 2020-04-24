@@ -11,6 +11,8 @@ In this chapter we will look at a few security caveats that are good to know abo
 3. [Handle build secrets](#buildsecrets)
 4. [Handle runtime secrets](#runtimesecrets)
 
+---
+
 ## 5.1 Keep your dependencies updated <a name="updated"></a>
 
 Congratulations, you are running your micro services in containers and have thus been wide-ranging granted control over your application's runtime.<br/>
@@ -150,6 +152,8 @@ For example, when you specify, `FROM node:latest`, you get an image of the lates
 
 Check out the images' documentation on Docker Hub (t.ex.: [node](https://hub.docker.com/_/node)) to see what tags there are. These pages can be quite dense. As a tip: To see what a tag like `latest` is currently based on, look for it on the page and see what version tags are listed on the same row, these are usually equivalent.
 
+---
+
 ## 5.2 Scrutinize your sources <a name="sources"></a>
 
 As usual with software, you need to handle the risk of not knowing for sure if you can trust a source that you pull in software from.
@@ -166,6 +170,7 @@ It is not always easy to verify if an image was created by the upstream open sou
 * Is the Docker image linked to from the official open source project's website or the README file?
 * Have a look at the profile page of the image publisher (example for [selenium](https://hub.docker.com/u/selenium)). Does the information provided make sense? Things like wrong links to the project page or recent join dates should make you suspicious.
 
+---
 
 ## 5.3 Handle build secrets <a name="buildsecrets"></a>
 
@@ -247,8 +252,9 @@ FROM nginx:latest
 COPY --from=build build_artifact build_artifact
 ```
 
----
 </details>
+
+---
 
 ## 5.4 Handle runtime secrets <a name="runtimesecrets"></a>
 

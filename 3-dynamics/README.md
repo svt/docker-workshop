@@ -13,6 +13,8 @@ In this chapter you will try building Docker images dynamically with ARGs and co
 3. [Combining ARG and ENV](#combining)
 4. [Using the host filesystem](#volumes)
 
+---
+
 ## 3.1 Building with `ARG` and `--build-arg` <a name="arg"></a>
 
 The `ARG` instruction lets you define variables that exist in the scope of the docker build process. The resulting variable can have a default value defined and can also be overridden from the `docker build` command using the flag `--build-arg`. An example:

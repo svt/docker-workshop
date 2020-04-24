@@ -14,6 +14,8 @@ In this chapter you will learn about Dockerfiles and how to use them to build yo
 4. [Widening our network](#network)
 5. [More things to try](#more)
 
+---
+
 ## 2.1 Where images come from <a name="where"></a>
 
 In the last chapter we used *Docker images* to run containers. But where do the images come from?
@@ -236,10 +238,6 @@ CMD ["-g", "daemon off;"]
 
 ---
 
-<img src="img/the_big_idea.jpeg" alt="The big idea - Part of a fanzine by Julia Evans" />
-
----
-
 ## 2.2 Building images <a name="building"></a>
 
 Once you have a Dockerfile, you can start cooking up some images! The command to build an image from a Dockerfile located in the current working directory is:
@@ -420,6 +418,8 @@ docker run -p 8080:80 mynginximage:latest
 
 * [The publish port option specification](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose)
 * [Binding docker ports](https://runnable.com/docker/binding-docker-ports)
+
+---
 
 ## 2.5 More things to try <a name="more"></a>
 
