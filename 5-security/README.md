@@ -111,7 +111,8 @@ Depending on a specific version of your base image can work for you even if you 
 
 Fundamentally, both approaches benefit very much from good automated integration test coverage. Depending on a specific version can however enable you to **handle the risk of upstream regressions with a more manual testing-based approach**.
 
-The big challenge is to create a working update process and getting an answer to the question: When do I need to update? You can get help with this - read on.
+The big challenge is to create a working update process and getting an answer to the question: When do I need to update?<br/> You can get help answering that question though: Integrate a security scanning tool, like Open Source tool [trivy](https://github.com/aquasecurity/trivy), into your [Continuous Delivery pipeline](https://github.com/aquasecurity/trivy#continuous-integration-ci).<br/>
+Especially if you only do sporadic development on your service, consider running security scans on schedule with notifications to where you see them. That way you get a ping when a security vulnerability has been discovered that might affect your service. Depending on the severity of the vulnerability and the probability of exploitation in your service, you can make an informed decision about when to update.
 
 ##### Real life use-cases
 
