@@ -15,7 +15,7 @@ In this chapter we will look at a few security caveats that are good to know abo
 
 ## 5.1 Keep your dependencies updated <a name="updated"></a>
 
-Congratulations, you are running your micro services in containers and have thus been wide-ranging granted control over your application's runtime.<br/>
+Congratulations, you are running your micro services in containers and have thus been granted wide-ranging control over your application's runtime.<br/>
 In other words: Congratulations, you have been awarded with the trust to maintain the operating system (OS)-level dependencies of your applications.
 
 Keeping your OS-level dependencies updated important because just like your library dependencies, your OS-level dependencies can contain security bugs that need to be patched.
