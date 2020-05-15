@@ -2,7 +2,7 @@
 
 **A workshop in several chapters, originally held by the Developer Experience team at SVT.**
 
-This workshop is for anyone who wishes to learn about docker and container management beyond copying and paste:ing from a guide somewhere on the internet. It is divided into multiple parts, but feel free to start at any point you feel is right for you. Some of the practical examples may depend on information presented earlier, in these cases we have tried to link back to the relevant information.
+This workshop is for anyone who wishes to learn about docker and container management beyond copying and pasting from a guide somewhere on the internet. It is divided into multiple parts, but feel free to start at any point you feel is right for you. Some of the practical examples may depend on information presented earlier, in these cases we have tried to link back to the relevant information.
 
 ## Prerequisites
 
