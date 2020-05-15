@@ -13,6 +13,6 @@
     "install": "gitbook install",
     "debug": "gitbook build ./ --log=debug --debug"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Sveriges Television AB",
+  "license": "CC-BY-SA-4.0"
 }
