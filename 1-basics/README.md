@@ -24,7 +24,7 @@ Docker image registries are web services where Docker images live until you want
 
 * Public registries - like *Docker hub*.
 
-* Private registries - like *hub.molnet.svt.se*, where most of SVT:s Development teams store their images.
+* Private registries - like *https://harbor.support.aurora.svt.se/harbor/*, where most of SVT:s Development teams store their images.
 
 The docker command assumes that you want to use *Docker hub* unless you specify another repository.
 
@@ -140,7 +140,7 @@ Look at the output: Images have *IDs*, *names* and *tags* to help identify them.
 
 ## 1.2 Running things in containers  <a name="commands"></a>
 
-OK, so there was some output from the last command, but nothing really *happened* in that container, right? The reason for this is simply that the Ubuntu image does not have instructions to actually do anything when it is run - it only provides a simulated Ubuntu environment for *you* to run commands in. If we want to make the container actually do something, we have to provide it with some more instructions.
+OK, so there was some output from the command `sh docker run ubuntu`, but nothing really *happened* in that container, right? The reason for this is simply that the Ubuntu image does not have instructions to actually do anything when it is run - it only provides a simulated Ubuntu environment for *you* to run commands in. If we want to make the container actually do something, we have to provide it with some more instructions.
 
 The complete syntax for the `docker run` command is:
 
@@ -187,7 +187,7 @@ The resulting container's job is to print the date and time every 10 seconds. It
 
 To manage continuously running containers like this one we can use the `docker ps` command. It outputs information about all running containers, such as their *Container ID*, what image they use, what commands they are running, and their age.
 
-When we know a container's *Container ID*, we can manage it further. The `docker kill` command is used to stop a running container.
+When we know a container's *Container ID* or *Container name*, we can manage it further. The [`docker kill`](https://docs.docker.com/engine/reference/commandline/kill/) command is used to stop a running container imediately, and the [`docker stop`](https://docs.docker.com/engine/reference/commandline/stop/) command will attempt to stop the container's processes gracefully and then kill the container.
 
 ```sh
 docker ps # Show information about running containers
@@ -358,7 +358,7 @@ The output actually contains a whole section of networking information:
         }
 ```
 
-And as we can see, the container has the IP address `172.17.0.2`. It is a private address on a /24 network that is managed by the docker daemon and only exists inside your computer. Every docker container you start gets assigned one automatically. Right now we aren't using it for anything, but it might come in useful later.
+And as we can see, the container has the IP address `172.17.0.2`. It is a private address on a /16 network that is managed by the docker daemon and only exists inside your computer. Every docker container you start gets assigned one automatically. Right now we aren't using it for anything, but it might come in useful later.
 
 (There is *a lot* more to docker networking, but this is basically the default behaviour and it is what will usually happen if you run docker with the default configuration. Most of us never need to dig deeper than this, fortunately, but you should know that this is one specific scenario only and many many more exist out there.)
 
